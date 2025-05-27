@@ -2,7 +2,7 @@
 
 ## Objectifs
 
-Créer un jeu streetfighter en réseau, impliquant deux cartes STM32F7-discovery <ins>clients</ins> ainsi qu'un serveur fonctionnant sur un ordinateur en Python. Travail réalisé avec Gatien Séguy. 
+Créer un jeu streetfighter en réseau, impliquant deux cartes STM32F7-discovery (clients) ainsi qu'un serveur TCP fonctionnant sur un ordinateur en Python. Travail réalisé avec Gatien Séguy. 
 
 ## Etapes du projet
 
@@ -40,4 +40,4 @@ Cela permet d'éviter de filtrer les messages reçus par les cartes, même si pa
 On obtient un streetfighter fonctionnant modérément bien. Le problème principal réside dans le fait que les calculs de perte de point de vie sont faits localement sur chaque carte, en se basant uniquement sur la position et l'état (attaque ou non) de l'autre joueur. Cela pose une multitude de problèmes de synchronisation. 
 
 > On pourrait résoudre simplement ces problèmes en utilisant une architecture plus adaptée à des jeux en réseau :
-> Le serveur reçoit uniquement les "inputs" des joueurs, effectue les calculs nécessaire (déplacement, perte de point de vie, fin du jeu, attente de RaZ...), et renvoie le résultat de ces calculs aux deux cartes pour l'affichage. Cela reste donc une piste d'amélioration importante pour notre jeu. 
+> Le serveur reçoit uniquement les "inputs" des joueurs, effectue les calculs nécessaires (déplacement, perte de point de vie, fin du jeu, attente de RaZ...), et renvoie le résultat de ces calculs aux deux cartes pour l'affichage. Cela reste donc une piste d'amélioration importante pour notre jeu. 
